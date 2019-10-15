@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
 import { LoginProvider } from '../../providers/login/login';
+import { Storage } from '@ionic/storage';
 
 /**
  * Generated class for the LoginPage page.
@@ -23,7 +24,8 @@ export class LoginPage {
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               public menu: MenuController,
-              public loginProvider: LoginProvider) {
+              public loginProvider: LoginProvider,
+              public storage: Storage) {
 
   }
 
@@ -37,17 +39,25 @@ export class LoginPage {
   } 
 
   logar(): void{
+
+ //   this.navCtrl.setRoot('HomePage');
+
     /* O navController limpa a pilha de páginas e redirecionar para a página especificada
     * sempre colocar o nome da classe com anotação IonicPage(); */
     this.loginProvider.verificarInformacoesPaciente(this.login, this.senha)
       .subscribe(
-        res => {
+        (res: any ) => {
+          this.storage.set("usuario_id", res.usuario_id);
+          this.storage.set("usuario_nome", res.usuario_nome);
+          this.storage.set("token", res.token);
+
           this.navCtrl.setRoot('HomePage');
 
           console.log(res);
         },
         err => {
-          alert('Usuário e/ou senha inválidos');
+        //  this.navCtrl.setRoot('HomePage');
+          //alert('Usuário e/ou senha inválidos');
         }
       );
   }

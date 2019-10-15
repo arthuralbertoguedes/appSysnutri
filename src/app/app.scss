@@ -1,16 +1,56 @@
-// http://ionicframework.com/docs/theming/
+@font-face{
+    src: url('../assets/font/American\ Captain.ttf');
+    font-family: logo;
+}
 
+/* RESETS */
 
-// App Global Sass
-// --------------------------------------------------
-// Put style rules here that you want to apply globally. These
-// styles are for the entire app and not just one component.
-// Additionally, this file can be also used as an entry point
-// to import other Sass files to be included in the output CSS.
-//
-// Shared Sass variables, which can be used to adjust Ionic's
-// default Sass variables, belong in "theme/variables.scss".
-//
-// To declare rules for a specific mode, create a child rule
-// for the .md, .ios, or .wp mode classes. The mode class is
-// automatically applied to the <body> element in the app.
+p{
+    margin: 8px 0px;
+}
+
+.header-md::after{
+    display: none;
+
+}
+
+.logoTelaLogin{
+    font-family: logo;
+    font-size: 45px;
+}
+
+.card{
+    padding: 10px;
+    background: #f7941d;
+    box-shadow: 2px 3px 8px #000;
+    div{
+        font-size: 1em;
+    }
+
+}
+
+.btnVerde{
+    background: #28ac1e;
+    box-shadow: 2px 3px 8px #000;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    width: 100%;
+}
+  
+.container{
+    background: #f4bc59;
+    
+ }
+ .faixaVerde{
+     background: #165334;
+     color: white;
+ }
+
+ h3,h2,h1,p,button{
+    text-align: center;
+}
+
+.bgLaranjaEscuro{
+    background: #f7941d;
+}

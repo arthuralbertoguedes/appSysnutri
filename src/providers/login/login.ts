@@ -17,7 +17,6 @@ export class LoginProvider {
   }
 
   public verificarInformacoesPaciente(login: string, senha: string): Observable<Object>{
-    console.log(`${api}logar/autenticar`);
     return this.http.post(`${api}logar/autenticar`, {usuario: login, senha: senha, tipo: 2});
   }
 }

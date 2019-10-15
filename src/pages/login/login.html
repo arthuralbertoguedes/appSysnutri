@@ -4,15 +4,23 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
-  <ion-navbar>
-    <ion-title>SYSNUTRI</ion-title>
-  </ion-navbar>
+<ion-header style="border: none;">
+    <h1 class="logoTelaLogin">SYSNUTRI</h1>
 </ion-header>
 
-<ion-content padding>
-  <input type="text"[(ngModel)]="login">Login
-  <input type="text" [(ngModel)]="senha">Senha
-  <button (click)="logar()" ion-button>Logar</button>
+<ion-content padding class="background">
+  <div class="formulario-container">
+    <div style="text-align: center;">
+        <label for="">Login</label>
+        <br/>
+        <input type="text"[(ngModel)]="login">
+        <br/>
+        <label for="">Senha</label>
+        <br/>
+        <input type="password" [(ngModel)]="senha">
+        <br/>
+        <button (click)="logar()" ion-button>Logar</button>
+    </div>
+  </div>
 </ion-content>
 

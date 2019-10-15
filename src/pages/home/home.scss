@@ -11,6 +11,33 @@ page-home {
     }
     
     .container{
-        background: rgb(175, 241, 178);
+       background: #f4bc59;
+       
     }
+    .faixaVerde{
+        background: #165334;
+        color: white;
+    }
+}
+
+.logo {
+    font-family: logo;
+    font-size: 43px;
+    padding-top: 8px;
+}
+
+.font-bold{
+    font-size: 28px;
+    font-weight: 900;
+    color: white;
+}
+
+.font-light{
+    color: white;
+    font-size: 22px;    
+    font-weight: 600;
+}
+
+.btnLaranja{
+    background: #165334;
 }
