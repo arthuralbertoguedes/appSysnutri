@@ -1,0 +1,54 @@
+<ion-header class="header">
+  <div class="faixaVerde">
+     <h1 class="logoTelaLogin" class="logo" >Medidas</h1>
+  </div>
+</ion-header>
+
+<ion-content padding class="container">
+  <div  *ngFor = "let medida of medidas" style="margin-top: 30px; padding: 20px; overflow: auto" class="bgLaranjaEscuro radius">
+     <div >
+        <span style="margin-bottom: 55px; font-size: 28px;">Data da avaliação: {{medida.data | date : 'dd/MM/yyyy'}}</span>
+        <div class="divFloat"  >
+          <p>Braço direito (contraído)</p>
+          <p>{{medida.bracoContraidoDireito}}</p>
+        </div>
+        <div class="divFloat">
+          <p>Braço esquerdo (contraído)</p>
+          <p>{{medida.bracoContraidoEsquerdo}} cm</p>
+        </div>
+        <div class="divFloat">
+          <p>Braço direito (relaxado)</p>
+          <p>{{medida.bracoRelaxadoDireito}} cm</p>
+        </div>
+        <div class="divFloat">
+          <p>Braço esquerdo (relaxado)</p>
+          <p>{{medida.bracoRelaxadoEsquerdo}} cm</p>
+        </div>
+        <div class="divFloat">
+          <p>Coxa</p>
+          <p>{{medida.coxaDireita}} cm</p>
+        </div>
+        <div class="divFloat">
+          <p>Panturrilha</p>
+          <p>{{medida.panturrilhaDireita}} cm</p>
+        </div>
+        <div class="divFloat">
+          <p>Ombro</p>
+          <p>{{medida.ombro}} cm</p>
+        </div>
+        <div class="divFloat">
+          <p>Peitoral</p>
+          <p>{{medida.peitoral}} cm</p>
+        </div>
+        <div class="divFloat">
+          <p>Cintura</p>
+          <p>{{medida.cintura}} cm</p>
+        </div>
+        <div class="divFloat">
+          <p>Peso</p>
+          <p>{{medida.peso}} kg</p>
+        </div>
+     </div>
+     
+  </div>
+</ion-content>

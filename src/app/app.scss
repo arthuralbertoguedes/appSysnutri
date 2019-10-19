@@ -21,7 +21,7 @@ p{
 
 .card{
     padding: 10px;
-    background: #f7941d;
+    background: #f7941d !important;
     box-shadow: 2px 3px 8px #000;
     div{
         font-size: 1em;
@@ -33,7 +33,7 @@ p{
     background: #28ac1e;
     box-shadow: 2px 3px 8px #000;
     font-size: 17px;
-    font-weight: 600;
+    font-weight: 400;
     margin-bottom: 10px;
     width: 100%;
 }
@@ -47,10 +47,60 @@ p{
      color: white;
  }
 
- h3,h2,h1,p,button{
+ h3,h2,h1, p{
     text-align: center;
+    font-family: dear;
 }
 
+body, span, button{
+    font-family: tour;
+    font-size: 20px;
+}
 .bgLaranjaEscuro{
     background: #f7941d;
+}
+
+.toolbar-background-md {
+    background: #f4bc59;
+    color: white;
+}
+
+.toolbar-title-md{
+    color: #222;
+}
+
+.item-md{
+    background: #f4bc59;
+    color: #222;
+}
+
+.scroll-content{
+    background: #f4bc59;
+}
+
+.divFloat{
+    float: left;
+    width: 48%;
+    color: rgb(31, 27, 27);
+    font-size: 16px;
+    overflow: auto;
+    margin-top: 10px;
+}
+
+.align-left{
+    text-align: left !important;
+}
+
+.inputBranco{
+    background: white;
+    margin: 20px 0;
+}
+@font-face{
+    src: url('../assets/font/dear.ttf');
+    font-family: dear;
+}
+
+@font-face{
+    src: url('../assets/font/tour.otf');
+    font-family: tour;
 }

@@ -1,0 +1,18 @@
+<ion-header class="header">
+  <div class="faixaVerde">
+     <h1 class="logoTelaLogin" class="logo" >Refeições diárias</h1>
+  </div>
+</ion-header>
+<ion-content padding class="container">
+  <div *ngFor = "let refeicao of refeicoes" style="margin-top: 30px; padding: 20px; overflow: auto" class="bgLaranjaEscuro radius">
+    <div>
+      <p style="margin-bottom: 10px; font-size: 28px; color: black">
+        {{refeicao.tipoRefeicao}} - {{refeicao.horario}}
+      </p>
+      <p *ngFor = " let item of refeicao.itensRefeicao"class="align-left" style="font-size: 20px;">
+        {{item.alimento.descricao}} - {{item.quantidade}}
+      </p>
+   </div>
+  </div> 
+  
+</ion-content>

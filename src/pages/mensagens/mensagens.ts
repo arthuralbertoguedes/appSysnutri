@@ -10,7 +10,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-mensagens',
+  selector: 'mensagens',
   templateUrl: 'mensagens.html',
 })
 export class MensagensPage {

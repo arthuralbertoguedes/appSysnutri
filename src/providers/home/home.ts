@@ -23,4 +23,9 @@ export class HomeProvider {
   buscarPlanoAlimentar(id: number, token: string): Observable<any>{
     return this.http.get(`${api}/alimento/planoAlimentar/buscar/${id}`, {headers: {'Authorization': 'Bearer ' + token}});
   }
+
+  buscarMedidas(id: number, token: string): Observable<any>{
+    return this.http.get(`${api}/antropometria/${id}`, {headers: {'Authorization': 'Bearer ' + token}});
+
+  }
 }

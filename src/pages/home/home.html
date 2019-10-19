@@ -1,13 +1,4 @@
 
-<ion-footer>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
-    <ion-title>Perfil</ion-title>
-  </ion-navbar>
-</ion-footer>
 
 <ion-header class="header">
   <div class="faixaVerde">
@@ -20,16 +11,16 @@
  
   
   <div class="card">
-      <p class="font-bold">Próxima refeição</p>
-      <p class="font-light">Almoço - 12:30</p>
+      <p class="font-light" style="font-family: dear;">Próxima refeição</p>
+      <p class="font-light">Café da manhã - 08:30</p>
       <button ion-button class="btnLaranja" (click)="navegar('RefeicaoPage')">Ver alimentos   <ion-icon name="arrow-dropright" style="margin-left: 15px"></ion-icon></button>
   </div>
 <div style="margin-top: 30px; padding: 20px;">
-  <button ion-button class="btnVerde" (click)="navegar('mensagens')"><ion-icon name="chatboxes" style="margin-right: 15px"></ion-icon>Mensagens</button>
-  <button ion-button class="btnVerde"><ion-icon name="alarm" style="margin-right: 15px"></ion-icon>Refeições diárias</button>
-  <button ion-button class="btnVerde"><ion-icon name="body" style="margin-right: 15px"></ion-icon>Medidas</button>
+  <button ion-button class="btnVerde" (click)="navegar('MensagensPage')"><ion-icon name="chatboxes" style="margin-right: 15px"></ion-icon>Mensagens</button>
+  <button ion-button class="btnVerde" (click)="navegar('PlanoAlimentarPage')"><ion-icon name="alarm" style="margin-right: 15px"></ion-icon>Refeições diárias</button>
+  <button ion-button class="btnVerde"(click)="navegar('MedidasPage')"><ion-icon name="body" style="margin-right: 15px"></ion-icon>Medidas</button>
   <button ion-button class="btnVerde"><ion-icon name="book" style="margin-right: 15px"></ion-icon>Dicas</button> 
-  <button ion-button class="btnVerde"><ion-icon name="albums" style="margin-right: 15px"></ion-icon>Meus Dados</button>
+  <button ion-button class="btnVerde"(click)="navegar('MeusDadosPage')"><ion-icon name="albums" style="margin-right: 15px"></ion-icon>Meus Dados</button>
 </div>
   <!--<button ion-button (click)="navegar('mensagens')">Mensagens</button>
   <button ion-button >Plano Alimentar</button>

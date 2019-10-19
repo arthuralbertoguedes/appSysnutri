@@ -13,6 +13,7 @@ export class HomePage {
   public usuario_id: number;
   public usuario_nome: string;
   public token: string;
+  public paciente_id: number;
 
   constructor(public navCtrl: NavController,
               public storage: Storage,
@@ -46,6 +47,9 @@ export class HomePage {
     this._homeProvider.buscarPaciente(this.usuario_id, this.token)
       .subscribe(
           (res: any) => {
+            this.setarDadosPaciente(res);
+            this.paciente_id = res.id;
+            this.storage.set('paciente_id', res.id);
             this.buscarPlanoAlimentarPaciente(res.id);
           }
           
@@ -59,5 +63,9 @@ export class HomePage {
             console.log(res);
           }
       )
+  }
+
+  setarDadosPaciente(res: any){
+      console.log(res);
   }
 }

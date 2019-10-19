@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController, AlertController } from 'ionic-angular';
 import { LoginProvider } from '../../providers/login/login';
 import { Storage } from '@ionic/storage';
 
@@ -25,7 +25,8 @@ export class LoginPage {
               public navParams: NavParams,
               public menu: MenuController,
               public loginProvider: LoginProvider,
-              public storage: Storage) {
+              public storage: Storage,
+              public alert: AlertController) {
 
   }
 
@@ -40,7 +41,7 @@ export class LoginPage {
 
   logar(): void{
 
- //   this.navCtrl.setRoot('HomePage');
+    //this.navCtrl.setRoot('HomePage');
 
     /* O navController limpa a pilha de páginas e redirecionar para a página especificada
     * sempre colocar o nome da classe com anotação IonicPage(); */
@@ -52,12 +53,14 @@ export class LoginPage {
           this.storage.set("token", res.token);
 
           this.navCtrl.setRoot('HomePage');
-
-          console.log(res);
         },
         err => {
-        //  this.navCtrl.setRoot('HomePage');
-          //alert('Usuário e/ou senha inválidos');
+          const alert = this.alert.create({
+            title: 'Erro!',
+            subTitle: 'Usuário e/ou senha inválidos !',
+            buttons: ['OK']
+          });
+          alert.present();
         }
       );
   }

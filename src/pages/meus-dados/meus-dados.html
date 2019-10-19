@@ -1,0 +1,29 @@
+<ion-header class="header">
+  <div class="faixaVerde">
+     <h1 class="logoTelaLogin" class="logo" >Meus Dados</h1>
+  </div>
+</ion-header>
+
+<ion-content padding class="container">
+  <div *ngIf="usuario != undefined && usuario!= null" style="margin-top: 30px; padding: 20px; overflow: auto" class="bgLaranjaEscuro radius">
+    <div>
+       <span style="margin-bottom: 55px; font-size: 28px;">{{usuario.nome}}</span>
+       <div class="divFloat"  style="width:100%; text-align: left;">
+         <p class="align-left">Data de nascimento: {{usuario.dataNascimento == null? 'Não cadastrado' : usuario.dataCadastro | date : 'dd/MM/yyyy'}}</p>
+         <p class="align-left">Data de cadastro: {{usuario.dataCadastro | date : 'dd/MM/yyyy'}}</p>
+         <p class="align-left">Gênero: {{usuario.genero == 'M'? 'Masculino': 'Feminino'}}</p>
+         <p class="align-left">Endereço: {{usuario.endereco.logradouro == ''? 'Não cadastrado' : usuario.endereco.logradouro}}</p>
+         <p class="align-left">Telefone:  {{usuario.telefone == ''? 'Não cadastrado' : usuario.telefone}}</p>
+         <p class="align-left">Cidade: {{usuario.endereco.cidade == ''? 'Não cadastrado' : usuario.endereco.cidade}}</p>
+         <p class="align-left">Cep: {{usuario.endereco.cep == ''? 'Não cadastrado' : usuario.endereco.cep}}</p>
+         <p class="align-left">Email: {{usuario.email == ''? 'Não cadastrado' : usuario.email}}</p>
+         <button ion-button class="btnVerde" style="width: 95%"><ion-icon name="edit"></ion-icon>Editar Informações</button>
+         <button ion-button class="btnVerde" style="width: 95%"><ion-icon name="edit"></ion-icon>Alterar Senha</button>
+
+       </div>
+
+    </div>
+    
+ </div>
+
+</ion-content>
