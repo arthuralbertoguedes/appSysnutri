@@ -47,7 +47,6 @@ export class HomePage {
     this._homeProvider.buscarPaciente(this.usuario_id, this.token)
       .subscribe(
           (res: any) => {
-            this.setarDadosPaciente(res);
             this.paciente_id = res.id;
             this.storage.set('paciente_id', res.id);
             this.buscarPlanoAlimentarPaciente(res.id);
@@ -65,7 +64,6 @@ export class HomePage {
       )
   }
 
-  setarDadosPaciente(res: any){
-      console.log(res);
-  }
+
+  
 }

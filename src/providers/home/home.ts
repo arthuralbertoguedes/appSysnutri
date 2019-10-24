@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { api } from '../../app/global/api';
 import { Observable } from 'rxjs/Observable';
+import { Mensagem } from '../../models/mensagem.model';
 
 /*
   Generated class for the HomeProvider provider.
@@ -27,5 +28,15 @@ export class HomeProvider {
   buscarMedidas(id: number, token: string): Observable<any>{
     return this.http.get(`${api}/antropometria/${id}`, {headers: {'Authorization': 'Bearer ' + token}});
 
+  }
+
+  public buscarMensagens(idPaciente: number, idNutricionista: number, token: string): Observable<Mensagem[]>{
+    return this.http.get<Mensagem[]>(`${api}/mensagem/buscarMensagens/${idPaciente}/${idNutricionista}`, {headers: {'Authorization': 'Bearer ' + token}});
+    
+  }
+
+  salvarMensagem(mensagem: Mensagem, token: string): any{
+    return this.http.post(`${api}/mensagem/salvar`, mensagem, {headers: {'Authorization': 'Bearer ' + token}});
+ 
   }
 }
